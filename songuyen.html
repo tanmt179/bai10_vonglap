@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hienthisonguyento</title>
+</head>
+<body>
+<script>
+    function check(n) {
+        let flag = 1;
+        let i = 2;
+        while (i < n) {
+            if (n % i == 0) {
+                flag = 0;
+                break;
+            }
+            i++;
+        }
+        return flag;
+    }
+
+    let number = prompt('Nhập giá trị')
+    let count = 0;
+    let i = 2;
+    while (count < number) {
+        if (check(i)) {
+            document.write(i + " ")
+            count++
+        }
+        i++
+    }
+</script>
+</body>
+</html>
