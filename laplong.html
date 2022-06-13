@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let sout = "<table border='1'>"
+    // for (let row = 1; row <= 10; row++) {
+    //     sout = sout + "<tr>";
+    //     for (let col = 1; col <= 10; col++) {
+    //         sout = sout + "<td>" + row * col + "</td>";
+    //     }
+    //     sout = sout + "</tr>";
+    // }
+    // sout = sout + "</table>";
+    // document.write(sout);
+    //.................................................................
+    let sout = "<table border='1'>"
+    let row = 1;
+    let col = 1;
+    while (row <= 10) {
+        sout = sout + "<tr>";
+        while (col <= 10) {
+            sout = sout + "<td>" + row * col + "</td>";
+            col++;
+        }
+        sout = sout + "</tr>";
+        col = 1;
+        row++;
+    }
+    sout = sout + "</table>";
+    document.write(sout);
+</script>
+</body>
+</html>
