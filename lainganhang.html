@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh lai ngan hang</title>
+    <style>
+        th {
+            background: aquamarine;
+            color: red;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 1px;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Nhập số tiền gửi</th>
+        <th>Lãi suất %tháng</th>
+        <th>Số tháng gửi</th>
+        <th>Số tiền lãi nhận được</th>
+    </tr>
+    <tr>
+        <td><input type="number" id="money"></td>
+        <td><input type="text" id="laisuat"></td>
+        <td><input type="number" id="month"></td>
+        <td><p id="in"></p></td>
+    </tr>
+</table>
+<button onclick="clicka()">Click</button>
+<script>
+    function clicka() {
+        let money = +document.getElementById('money').value;
+        let lai = +document.getElementById('laisuat').value;
+        let month = +document.getElementById('month').value;
+        let sum = 0;
+        let a = 0
+        for (let i = 1; i <= month; i++) {
+            sum = money * lai / 100;
+            money += sum;
+            a += sum
+        }
+        document.getElementById('in').innerHTML = Math.round(a);
+    }
+</script>
+</body>
+</html>
